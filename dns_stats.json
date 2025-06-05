@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-05T07:43:06.077573",
+  "total_blocked": 241,
+  "domains_in_blocklist": 581789,
+  "companies": {
+    "Microsoft": 167,
+    "Google": 62,
+    "Other": 12
+  }
+}

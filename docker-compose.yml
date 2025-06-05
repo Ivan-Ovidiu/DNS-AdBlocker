@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  flask-service:
+    image: flask_dns_app
+    build: .                          
+    container_name: flask_web_stats
+    volumes:
+      - .:/app                #pun totul in app
+    ports:
+      - "5000:5000"
+    networks:
+      - dns_server 
+    command: bash -c "cd /app && python flask_Script.py"
+
+  dns-service:
+    image: flask_dns_app
+    build: .                          
+    container_name: dns_adblock
+    volumes:
+      - .:/app                
+    network_mode: "host"   
+    environment:
+      - UPSTREAM_DNS=8.8.8.8
+      - LOG_LEVEL=INFO  
+    cap_add:
+      - NET_BIND_SERVICE    
+    privileged: true                
+    command: bash -c "cd /app && python dns_Script.py"
+
+networks:
+  dns_server:
+    driver: bridge
