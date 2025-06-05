@@ -38,3 +38,11 @@ docker-compose ps
 # Access the Dashboard
 Once running, open your web browser and go to:
 http://localhost:5000
+
+## Main page with statistics
+![image](https://github.com/user-attachments/assets/a78c3f46-4388-4301-aabd-2991ad2ffd4e)
+
+## Logs, api endpoint: /logs
+![image](https://github.com/user-attachments/assets/6d5fe3ae-bdad-42ce-96c3-f78ef2ee89ed)
+
+
