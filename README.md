@@ -16,31 +16,25 @@ A Pi-hole inspired DNS server implementation that blocks advertisements and trac
 ## Installation/Requierments
 1. Install Docker
 ```
-bashsudo apt update
+sudo apt update
 sudo apt install -y docker.io docker-compose
 sudo usermod -aG docker $USER
 ```
-3. Clone and Start
-bashgit clone <repository-url>
-cd dns-ad-blocker
-4. Run the Application
-bash# Start the DNS blocker
-docker-compose up 
-#Stop the DNS blocker
-docker-compose down
-#Check status
-docker-compose ps
 2. Clone and Start
+```
 bashgit clone <repository-url>
 cd dns-ad-blocker
+```
 3. Run the Application
-bash# Start the DNS blocker
+```
+#Start the DNS blocker
 docker-compose up 
 #Stop the DNS blocker
 docker-compose down
 #Check status
 docker-compose ps
+```
 
-#3 Access the Dashboard
+# Access the Dashboard
 Once running, open your web browser and go to:
 http://localhost:5000
