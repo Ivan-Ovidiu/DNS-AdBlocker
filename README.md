@@ -1,8 +1,8 @@
-#DNS AdBlocker and tracker with Docker orchestration
+# DNS AdBlocker and tracker with Docker orchestration
 
 A Pi-hole inspired DNS server implementation that blocks advertisements and tracking domains at the network level. Built with Python and containerized using Docker Compose for easy deployment and configuration.
 
-##Features
+## Features
 
 - **Custom DNS Server** - Intercepts DNS queries and blocks known ad/tracking domains
 - **Real-time Blocking** - Returns `0.0.0.0` for blocked domains, effectively blocking ads and trackers
