@@ -15,13 +15,15 @@ A Pi-hole inspired DNS server implementation that blocks advertisements and trac
 
 ## Installation/Requierments
 1. Install Docker
+```
 bashsudo apt update
 sudo apt install -y docker.io docker-compose
 sudo usermod -aG docker $USER
-2. Clone and Start
+```
+3. Clone and Start
 bashgit clone <repository-url>
 cd dns-ad-blocker
-3. Run the Application
+4. Run the Application
 bash# Start the DNS blocker
 docker-compose up 
 #Stop the DNS blocker
