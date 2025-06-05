@@ -34,6 +34,23 @@ docker-compose down
 #Check status
 docker-compose ps
 ```
+## Troubleshooting
+Port 53 Not Available
+If you get an error that port 53 is already in use:
+```
+#Check what's using port 53
+$ sudo netstat -tulpn | grep :53
+```
+
+# Stop the conflicting service (usually systemd-resolved)
+```
+$ sudo systemctl stop systemd-resolved
+```
+
+# Try starting again
+```
+$ docker-compose up
+```
 
 # Access the Dashboard
 Once running, open your web browser and go to:
