@@ -35,19 +35,20 @@ docker-compose down
 docker-compose ps
 ```
 ## Troubleshooting
-Port 53 Not Available
-If you get an error that port 53 is already in use:
+### Port 53 Not Available
+
+1. If you get an error that port 53 is already in use:
 ```
 #Check what's using port 53
 $ sudo netstat -tulpn | grep :53
 ```
 
-# Stop the conflicting service (usually systemd-resolved)
+2. Stop the conflicting service (usually systemd-resolved)
 ```
 $ sudo systemctl stop systemd-resolved
 ```
 
-# Try starting again
+3. Try starting again
 ```
 $ docker-compose up
 ```
